@@ -37,11 +37,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         val massivB= arrayOf(1, 8, 2, 4, 8, 4, 3, 5)
-        massivB.sortDescending()
-        massivB.sort()
-        val sortedArray = massivB.sortedArray()
-        val sortedDescendingArray = massivB.sortedArrayDescending()
-        println(sortedDescendingArray)
+        println(massivB.sorted())
+        println(massivB.sortedDescending())
 
 //such a fuck 222222222
 
@@ -58,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             if (l>0)
             println("Plusi:$l")
             else
-        println("Minusa:$l")
+                println("Minusa:$l")
 
 
         val h = 23
@@ -77,31 +74,16 @@ class MainActivity : AppCompatActivity() {
             println("nechetnoe")
 
 
-        val age = 23
-        when(age){
-            0-> println("infant")
-            1-> println("infant")
-            2 -> println("infant")
-            3 -> println("Child")
-            4->println("Child")
-            5->println("Child")
-            6->println("Child")
-            7->println("Child")
-            8->println("Child")
-            9->println("Child")
-            10->println("Child")
-            11->println("Child")
-            12->println("Child")
-            13 -> println("Teenager")
-            14-> println("Teenager")
-            15-> println("Teenager")
-            16-> println("Teenager")
-            17-> println("Teenager")
-            18-> println("Teenager")
-            19-> println("Teenager")
-            20-39 -> println("Adult")
-            40-60 -> println("Middle aged")
+        val age = 28
+        when(age) {
+            in 0..2 -> println("infant")
+            in 3..12 -> println("Child")
+            in 13..19 -> println("Teenager")
+            in 20..39 -> println("Adult")
+            in 40..60 -> println("Middle aged")
             else -> println("Eldery")
         }
+
+
     }
 }
