@@ -3,7 +3,6 @@ package com.example.myapplication
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import kotlin.math.min
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -84,6 +83,56 @@ class MainActivity : AppCompatActivity() {
             else -> println("Eldery")
         }
 
+         repeat(5){
+            println("let1 drink some beer")
+        }
+
+
+        fun wMessage(message: String) {
+            println("message:$message")
+        }
+            wMessage("let drink some beer1")
+            wMessage("let drink some beer2")
+            wMessage("let drink some beer3")
+            wMessage("let drink some beer4")
+            wMessage("let drink some beer5")
+            wMessage("let drink some beer6")
+            wMessage("let drink some beer7")
+            wMessage("let drink some beer8")
+            wMessage("let drink some beer9")
+            wMessage("let drink some beer10")
+
+        val ch = 6
+        fun schetalochka (chlen: Int){
+            println("moi chlen(sm):$chlen")
+        }
+        schetalochka(ch*5)
+
+        val gh = ch*5
+        fun drochilochka (int:Int){
+            println("tvoi chlen(sm):$int")
+        }
+        drochilochka(gh/2)
+
+        fun firstelem (int: Int){
+            println(int)
+        }
+        firstelem(massivB[0])
+
+
+        fun ebasosinka (string: String) {
+           println("Залупастан блять")
+
+            if (string.length>5){
+                val cal = string.length*1488
+                println(cal)
+            }
+            else
+                println(string.length)
+        }
+        ebasosinka("залупа телеграм, бла бла точка ру")
+        }
 
     }
-}
+
+
