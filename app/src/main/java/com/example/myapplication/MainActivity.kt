@@ -1,8 +1,18 @@
 package com.example.myapplication
 
+
+import android.graphics.Color
+import android.graphics.Color.BLUE
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Layout
 import android.util.Log
+import android.view.View
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -91,28 +101,23 @@ class MainActivity : AppCompatActivity() {
         fun wMessage(message: String) {
             println("message:$message")
         }
-            wMessage("let drink some beer1")
-            wMessage("let drink some beer2")
-            wMessage("let drink some beer3")
-            wMessage("let drink some beer4")
-            wMessage("let drink some beer5")
-            wMessage("let drink some beer6")
-            wMessage("let drink some beer7")
-            wMessage("let drink some beer8")
-            wMessage("let drink some beer9")
-            wMessage("let drink some beer10")
+        repeat(5){wMessage("let drink some beer")}
+
+
 
         val ch = 6
         fun schetalochka (chlen: Int){
+            schetalochka(ch*5)
             println("moi chlen(sm):$chlen")
         }
-        schetalochka(ch*5)
+
 
         val gh = ch*5
         fun drochilochka (int:Int){
+            drochilochka(gh/2)
             println("tvoi chlen(sm):$int")
         }
-        drochilochka(gh/2)
+
 
         fun firstelem (int: Int){
             println(int)
@@ -122,7 +127,7 @@ class MainActivity : AppCompatActivity() {
 
         fun ebasosinka (string: String) {
            println("Залупастан блять")
-
+            ebasosinka("залупа телеграм, бла бла точка ру")
             if (string.length>5){
                 val cal = string.length*1488
                 println(cal)
@@ -130,9 +135,76 @@ class MainActivity : AppCompatActivity() {
             else
                 println(string.length)
         }
-        ebasosinka("залупа телеграм, бла бла точка ру")
+        val tvtext = findViewById<TextView>(R.id.textV)
+        tvtext.text = "vodka"
+
+
+
+        val knopka = findViewById<Button>(R.id.btn1)
+        knopka.setOnClickListener {
+            tvtext.text = "pivo"
+        }
+        val knopka2 = findViewById<Button>(R.id.btn2)
+
+
+
+
+        fun h1() {
+            knopka2.setOnClickListener {
+                knopka2.setBackgroundColor(Color.WHITE)
+
+
+            }
+        }
+        fun h2() {
+            knopka2.setOnClickListener {
+                knopka2.setBackgroundColor(Color.BLUE)
+                h1()
+            }
+        }
+        fun h3() {
+            knopka2.setOnClickListener {
+                knopka2.setBackgroundColor(Color.RED)
+                h2()
+            }
+        }
+        repeat(2){h3()}
+
+
+
+
+
+
+
+
+        var etext = findViewById<EditText>(R.id.editText)
+
+        val ebtn = findViewById<Button>(R.id.btn3)
+        ebtn.setOnClickListener {
+            if (etext.text.toString() > 5.toString()){
+                ebtn.setBackgroundColor(Color.RED)
+            }
+            else {
+                ebtn.setBackgroundColor(BLUE)
+            }
         }
 
-    }
+
+
+
+
+
+
+        }
+
+
+
+
+
+}
+
+
+
+
 
 
