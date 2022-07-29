@@ -2,7 +2,7 @@ package com.example.myapplication
 
 
 import android.graphics.Color
-import android.graphics.Color.BLUE
+import android.graphics.Color.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Layout
@@ -144,31 +144,34 @@ class MainActivity : AppCompatActivity() {
         knopka.setOnClickListener {
             tvtext.text = "pivo"
         }
+        var colorseses = arrayOf(BLUE, WHITE, RED)
+        var clickCount = 0
         val knopka2 = findViewById<Button>(R.id.btn2)
+        knopka2.setOnClickListener{
+            clickCount++
+            if (clickCount>0){
+                knopka2.setBackgroundColor(colorseses[0])}
+            println(clickCount)
 
+    clickCount++
+                if (clickCount>1){
+                    knopka2.setBackgroundColor(colorseses[1])}
+println(clickCount)
 
+            clickCount++
+                if (clickCount>2){
+                    knopka2.setBackgroundColor(colorseses[2])}
+println(clickCount)
+clickCount=0
 
-
-        fun h1() {
-            knopka2.setOnClickListener {
-                knopka2.setBackgroundColor(Color.WHITE)
-
-
-            }
         }
-        fun h2() {
-            knopka2.setOnClickListener {
-                knopka2.setBackgroundColor(Color.BLUE)
-                h1()
-            }
-        }
-        fun h3() {
-            knopka2.setOnClickListener {
-                knopka2.setBackgroundColor(Color.RED)
-                h2()
-            }
-        }
-        repeat(2){h3()}
+
+
+
+
+
+
+
 
 
 
