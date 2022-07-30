@@ -163,11 +163,10 @@ class MainActivity : AppCompatActivity() {
             println(clickCount)
 
                 if (clickCount==3){
-                    knopka2.setBackgroundColor(colorseses[2])}
+                    knopka2.setBackgroundColor(colorseses[2])
+                    clickCount=0}
             println(clickCount)
-
-                if (clickCount==3){clickCount=0}
-
+            
         }
 
 
